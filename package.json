@@ -1,0 +1,11 @@
+{
+  "name": "ejercicios-js",
+  "version": "1.0.0",
+  "description": "Practicando codigo JS",
+  "main": "Ejercicio1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrés Romaña",
+  "license": "ISC"
+}

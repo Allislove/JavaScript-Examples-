@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Event Example</title>
+
+<style>
+    #t { border: 1px solid red }
+    #t1 { background-color: pink; }
+</style>
+
+<script>
+// Function to change the content of t2
+function modifyText() {
+  var t2 = document.getElementById("t2");
+  t2.firstChild.nodeValue = "three";
+}
+
+// Function to add event listener to t
+function load() {
+//Creamos una variable el para que tome el id t que esta en table, luego esa variable agregara un evento
+// Donde este evento sera escuchado cuando den un click, además pasamos la funcion de modifyText()
+// que sera llamada al momento que se da clic, y le pasamos otro valor de false, que no haria nada en este caso
+  var el = document.getElementById("t");
+  el.addEventListener("click", modifyText, false);
+}
+
+document.addEventListener("DOMContentLoaded", load, false);
+</script>
+
+</head>
+<body>
+
+<!-- Cuando presionen  la funcion load(), pues esta interactua llamando a la primer funcion modifyText() -->
+<table id="t">
+   <tr><td id="t1">one</td></tr>
+   <tr><td id="t2">two</td></tr>
+</table>
+
+</body>
+</html>
